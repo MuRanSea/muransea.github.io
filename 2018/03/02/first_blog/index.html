@@ -83,11 +83,11 @@
 <meta name="keywords" content="UnityEditor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Unity 编辑模式下修改一些东西">
-<meta property="og:url" content="http://yoursite.com/2018/03/02/Test/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/03/02/first_blog/index.html">
 <meta property="og:site_name" content="小站">
 <meta property="og:description" content="最近想改unity一个模型的子物体的名字，但是呢几十个非常恶心，思来想去在网上找了一下，修改了该代码，差不多能用。下面是代码：原代码链接123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051//在hierarchy中选中物体右键的操作        [MenuItem">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-05T07:19:28.931Z">
+<meta property="og:updated_time" content="2018-03-06T01:19:39.036Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity 编辑模式下修改一些东西">
 <meta name="twitter:description" content="最近想改unity一个模型的子物体的名字，但是呢几十个非常恶心，思来想去在网上找了一下，修改了该代码，差不多能用。下面是代码：原代码链接123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051//在hierarchy中选中物体右键的操作        [MenuItem">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/02/Test/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/02/first_blog/"/>
 
 
 
@@ -233,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/02/Test/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/02/first_blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="木然">
@@ -301,6 +301,7 @@
 
       
         <h5 id="最近想改unity一个模型的子物体的名字，但是呢几十个非常恶心，思来想去在网上找了一下，修改了该代码，差不多能用。下面是代码："><a href="#最近想改unity一个模型的子物体的名字，但是呢几十个非常恶心，思来想去在网上找了一下，修改了该代码，差不多能用。下面是代码：" class="headerlink" title="最近想改unity一个模型的子物体的名字，但是呢几十个非常恶心，思来想去在网上找了一下，修改了该代码，差不多能用。下面是代码："></a>最近想改unity一个模型的子物体的名字，但是呢几十个非常恶心，思来想去在网上找了一下，修改了该代码，差不多能用。下面是代码：</h5><p><a href="http://www.xuanyusong.com/archives/3893" target="_blank" rel="noopener">原代码链接</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">//在hierarchy中选中物体右键的操作</span><br><span class="line">    </span><br><span class="line">    [MenuItem(&quot;Window/Test/yusong&quot;)]</span><br><span class="line">    static void Test()</span><br><span class="line">    &#123;</span><br><span class="line">        Debug.Log(111);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    [MenuItem(&quot;Window/Test/momo&quot;)]</span><br><span class="line">    static void Test1()</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    [MenuItem(&quot;Window/Test/雨松/MOMO&quot;)]</span><br><span class="line">    static void Test2()</span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    [InitializeOnLoadMethod]</span><br><span class="line">    static void StartInitializeOnLoadMethod()</span><br><span class="line">    &#123;</span><br><span class="line">        //这是hierarchy面板GUI的回掉事件</span><br><span class="line">        EditorApplication.hierarchyWindowItemOnGUI += OnHierarchyGUI;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static void OnHierarchyGUI(int instanceID, Rect selectionRect)</span><br><span class="line">    &#123;</span><br><span class="line">        //只要在hierarchy中点住东西右键松开然后按其他的鼠标左键都会触发</span><br><span class="line">        if (Event.current != null &amp;&amp; selectionRect.Contains(Event.current.mousePosition)</span><br><span class="line">            &amp;&amp; Event.current.button == 1 &amp;&amp; Event.current.type &lt;= EventType.mouseUp)</span><br><span class="line">        &#123;</span><br><span class="line">            GameObject selectedGameObject = EditorUtility.InstanceIDToObject(instanceID) as GameObject;</span><br><span class="line">            //这里可以判断selectedGameObject的条件</span><br><span class="line">            if (selectedGameObject)</span><br><span class="line">            &#123;</span><br><span class="line">                Vector2 mousePosition = Event.current.mousePosition;</span><br><span class="line"></span><br><span class="line">                EditorUtility.DisplayPopupMenu(new Rect(mousePosition.x, mousePosition.y, 0, 0), &quot;Window/Test&quot;, null);</span><br><span class="line">                Event.current.Use();</span><br><span class="line">                Debug.Log(&quot;我开始了&quot;);</span><br><span class="line">                Transform t1 = selectedGameObject.transform.GetChild(2);</span><br><span class="line">                int num = t1.childCount;</span><br><span class="line">                for (int i = 0; i &lt; num; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    Debug.Log(&quot;?&quot;);</span><br><span class="line">                    t1.GetChild(num - i - 1).name = &quot;floor_&quot; + (i).ToString();</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>![此处输入图片的描述][1]</p>
 
       
     </div>
@@ -327,22 +328,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/02/ii/" rel="prev" title="Unity 编辑模式下修改一些东西">
-                Unity 编辑模式下修改一些东西 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
 
       
@@ -416,7 +401,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -547,6 +532,8 @@
   
 
 
+  
+
 
 
 
@@ -585,6 +572,11 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
