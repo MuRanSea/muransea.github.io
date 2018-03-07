@@ -356,7 +356,9 @@
 <p>然后就是一直都报错,后来找了半天是</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">obj = info.GetValue(null);</span><br></pre></td></tr></table></figure>
 <p>这一行出了问题</p>
-<figure class="highlight plain"><figcaption><span>obj)```,我一直以为这个参数可以随便填，妈的谁知道这竟然是我要获得类的实例</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">由于我已经有实例了所以只要改成</span><br><span class="line"></span><br><span class="line">```c</span><br><span class="line"> obj = info.GetValue(tween);</span><br></pre></td></tr></table></figure>
+<p>GetValue(object obj),我一直以为这个参数可以随便填，妈的谁知道这竟然是我要获得类的实例</p>
+<p>由于我已经有实例了所以只要改成</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">obj = info.GetValue(tween);</span><br></pre></td></tr></table></figure>
 <p>就好了</p>
 <p>没有的话就需要自己构造了</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Type[] types = <span class="keyword">new</span> Type[<span class="number">0</span>];<span class="comment">//为构造函数准备参数类型  </span></span><br><span class="line">        ConstructorInfo ci = t.GetConstructor(types); <span class="comment">//获得构造函数  </span></span><br><span class="line">        object[] objs = <span class="keyword">new</span> object[<span class="number">0</span>];<span class="comment">//为构造函数准备参数值  </span></span><br><span class="line">        object obj = ci.Invoke(objs);<span class="comment">//调用构造函数创建对象</span></span><br></pre></td></tr></table></figure>
